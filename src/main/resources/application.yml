@@ -1,0 +1,27 @@
+###客户关系开发环境设置
+server:
+  port: 8080
+---
+#thymeleaf相应的配置
+spring:
+  application:
+    name: ScanCodeGunDemo
+  thymeleaf:
+    encoding: utf-8  #设置编码模式
+    cache: false  #不开启模板缓存
+    content-type: text/html  #以html形式文档类型
+    prefix: "classpath:/tpl/" #模板查询的目录
+    suffix: ".html" #界面以.html文件结尾
+    mode: LEGACYHTML5
+---
+#日志的记录
+logging:
+  path: logs/
+  level:
+    root: INFO
+    com:
+      mandao:
+        crm:
+          server:
+           dao: DEBUG
+
